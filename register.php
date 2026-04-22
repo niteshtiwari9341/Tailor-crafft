@@ -40,9 +40,11 @@ if (isset($_POST['submit'])) {
     )";
 
     if (mysqli_query($con, $sql)) {
-        echo "Order Placed Successfully";
+    header("Location: success.html");
+    exit();
+}
     } else {
         echo "Error: " . mysqli_error($con);
     }
-}
+
 ?>
