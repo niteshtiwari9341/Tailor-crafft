@@ -90,8 +90,8 @@
 
 <h2>Place Your Order</h2>
 
-<!-- <form method="POST" action="register.php"> -->
-    <form id="orderForm" method="POST"></form>
+<form method="POST" action="register.php">
+    
 
     <!-- ================= CUSTOMER DETAILS ================= -->
 
@@ -169,13 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("category").value = params.get("category") || "";
   document.getElementById("price").value = params.get("price") || "";
 });
-const form = document.getElementById("orderForm");
-
-if (window.location.hostname === "localhost") {
-  form.action = "register.php";   // Localhost → DB save
-} else {
-  form.action = "success.html";   // GitHub → demo
-}
 </script>
 
 </body>
