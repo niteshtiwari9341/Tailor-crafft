@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiger Top Tailor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <a href="order-form.html?product=Shirt&category=Men&price=699">
+</a>
+ 
+  </div>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">
+    <img src="2945983.png" alt="Tiger Top Tailor">
+    <span>Tiger Top Tailor</span>
+  </div>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search Product">
+    <select id="filter-select">
+      <option value="all">All</option>
+      <option value="shirt">Shirt</option>
+      <option value="pant">Pant</option>
+      <option value="blezer">Blezer</option>
+      <option value="blouse">Blouse</option>
+      <option value="kurta">Kurta</option>
+      <option value="kids">Kids</option>
+      <option value="suit">Suit</option>
+    </select>
+  </div>
+
+  <ul class="nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#category">Category</a></li>
+  <li><a href="#service">Service</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li id="loginBtn"><a href="login.html">Login</a></li>
+  <li id="userName" style="display:none; font-weight:600; color:#ff9800; cursor:pointer;">
+  👤 <span id="navUserName"></span>
+  |
+  <span id="logoutBtn" style="color:#fff; font-size:14px;">Logout</span>
+</li>
+
+</ul>
+</nav>
+
+<!-- Slider Section -->
+<div class="slider">
+  <div class="welcome-marquee">
+    <div class="marquee-text">
+      <span class="line1">Welcome To Tiger</span><br>
+      <span class="line2">Top Tailor</span>
+    </div>
+  </div>
+  <div class="slides-container">
+    <img src="slide2.jpg" class="slide active">
+    <img src="slide3.jpg" class="slide">
+    <img src="slide4.jpg" class="slide">
+  </div>
+</div>
+<!-- Category Section -->
+<section id="category">
+  <h2 class="category-title">Our Category</h2>
+  <div id="results" class="categories-container">
+    <!-- Dynamic category cards appear here -->
+  </div>
+</section>
+
+<!-- Service Section -->
+<section id="service">
+  <h2><center>Our Services</center></h2>
+  <div class="service-steps">
+    <div class="step">
+      <h3>Sewing</h3>
+      <p>
+        Custom tailoring & stitching for all types of clothes. 
+        <span class="full-desc">We provide precise and stylish tailoring services for men, women, and kids. Choose fabric, design, and we stitch it to perfection.</span>
+        <span class="more-btn">More</span>
+      </p>
+    </div>
+    <div class="step">
+      <h3>Home Delivery</h3>
+      <p>
+        Get your stitched clothes delivered at your doorstep. 
+        <span class="full-desc">We ensure timely home delivery of your orders. Track your orders and receive them safely at your home.</span>
+        <span class="more-btn">More</span>
+      </p>
+    </div>
+    <div class="step">
+      <h3>Sewing Training</h3>
+      <p>
+        Learn sewing from professionals in a short period. 
+        <span class="full-desc">Our training sessions cover stitching techniques, fabric handling, pattern making, and professional tailoring skills for beginners and advanced learners.</span>
+        <span class="more-btn">More</span>
+      </p>
+    </div>
+    <div class="step">
+      <h3>Sewing Tools Sell</h3>
+      <p>
+        High quality sewing tools for your home & shop. 
+        <span class="full-desc">We sell scissors, needles, threads, measuring tapes, sewing machines, and other essential tools at affordable prices for home and professional use.</span>
+        <span class="more-btn">More</span>
+      </p>
+    </div>
+    <div class="step">
+      <h3>Sewing Mechanic</h3>
+      <p>
+        Repair & maintenance of sewing machines. 
+        <span class="full-desc">Our expert mechanics service all types of sewing machines, ensuring smooth operation and long-term durability. On-demand repair available.</span>
+        <span class="more-btn">More</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2><center>About Us</center></h2>
+  <div class="about-content">
+    <div class="owner-photo-section">
+      <img src="Umesh.jpeg" alt="Owner Photo" class="owner-photo">
+      <h3>Umesh Prajapati<br><span class="experience">25 Years Experience</span></h3>
+    </div>
+    <div class="owner-details">
+      <p>
+        Tiger Top Tailor is a premier tailoring shop dedicated to crafting perfect garments for every customer. Our journey started in 2001 with a small offline shop, serving local clients with love and precision. We specialize in custom stitching for men, women, and kids, combining style with comfort. Each garment is tailored to perfection, ensuring quality fabric handling and accurate measurements. Our team provides expert guidance on fabrics, designs, and patterns to bring your ideas to life. We also offer sewing tools, training sessions, and repair services to support your sewing journey. Customer satisfaction is at the heart of our operations, with personalized attention for every order. Timely delivery and professional finishing are our promises to each client. With 25 years of experience, Umesh Prajapati leads the team to maintain high standards consistently. We continue to innovate, learn, and adapt to modern trends while honoring traditional tailoring techniques.
+      </p>
+    </div>
+    <div class="owner-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d298.385122321701!2d84.40015438743201!3d25.599430443092558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39928311718d3f7b%3A0xd2366b8c0ceddcd9!2sTiger%20Top%20Tailors!5e0!3m2!1sen!2sin!4v1765816088614!5m2!1sen!2sin" 
+        width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+      <p style="text-align:center; margin-top:6px;">
+        <a href="https://www.google.com/maps/place/Tiger+Top+Tailors/@25.5994304,84.4001544,17z" target="_blank" style="color:#ff9800; text-decoration:none; font-weight:500;">
+          🔎 View Exact Location on Google Maps
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<section id="contact">
+<footer>
+  <p>Contact: +91 8809732250 | Email: <a href="mailto:tigertoptailor@gmail.com">tigertoptailor@gmail.com</a></p>
+  <p>
+    <a href="https://instagram.com" target="_blank">Instagram</a> | 
+    <a href="mailto:tigertoptailor@gmail.com">Gmail</a> | 
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+  </p>
+  <p>© 2025 Tiger Top Tailor</p>
+</footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

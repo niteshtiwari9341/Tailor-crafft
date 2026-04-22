@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <meta charset="UTF-8">
+
+    <style>
+       .container{
+        border: aqua 10px solid;
+       }
+        body{
+            font-family: Arial, sans-serif;
+            background:#f2f5f9;
+            padding:20px;
+        }
+        .ram{
+          background-color:black;
+        }
+        .container{
+            max-width:700px;
+            background:#fff;
+            background-color: 	#ffc0cb;
+            
+            margin:auto;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+        h2{
+            text-align:center;
+            color: blue;
+            
+        }
+        h3{
+            color:#333;
+            border-bottom:2px solid #e0e0e0;
+            padding-bottom:5px;
+            margin-top:25px;
+        }
+        label{
+            font-weight:bold;
+            font-size:14px;
+        }
+        input[type="text"],
+        input[type="date"],
+        textarea{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            border:1px solid #ccc;
+            border-radius:6px;
+        }
+        textarea{
+            resize:none;
+            height:70px;
+        }
+        .radio-group{
+            margin-top:8px;
+        }
+        .radio-group input{
+            margin-right:5px;
+        }
+        .product-box{
+            background:#f8f9ff;
+            padding:15px;
+            border-radius:8px;
+            border:1px solid #dbe2ff;
+        }
+        .submit-btn{
+            width:100%;
+            padding:12px;
+            background:turquoise;
+            color:#fff;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+            margin-top:20px;
+        }
+        .submit-btn:hover{
+            background:#125ea8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+  
+
+<h2>Place Your Order</h2>
+
+<form method="POST" action="register.php">
+
+    <!-- ================= CUSTOMER DETAILS ================= -->
+
+    <h3>Customer Details</h3>
+
+    <label>Full Name</label>
+    <input type="text" name="customer_name" required>
+
+    <label>Mobile Number</label>
+    <input type="text" name="mobile" required>
+
+    <label>Address</label>
+    <textarea name="address" required></textarea>
+
+    <!-- ================= PRODUCT DETAILS (AUTO / HIDDEN) ================= -->
+
+    <input type="hidden" id="product_name" name="product_name">
+    <input type="hidden" id="category" name="category">
+    <input type="hidden" id="price" name="price">
+
+    <h3>Selected Product</h3>
+    <div class="product-box">
+        <p><b>Product:</b> Shirt</p>
+        <p><b>Category:</b> Men</p>
+        <p><b>Price:</b> ₹699</p>
+    </div>
+
+    <!-- ================= MEASUREMENT ================= -->
+
+    <h3>Measurement Details</h3>
+
+    <label>Measurement Type</label>
+    <div class="radio-group">
+        <input type="radio" name="measurement_type" value="Online" checked> Online  
+        <input type="radio" name="measurement_type" value="Home Visit"> Home Visit  
+    </div>
+
+    <label>Measurement Details (Size / Notes)</label>
+    <textarea name="measurement_details"></textarea>
+
+    <label>Measurement Date (if visit required)</label>
+    <input type="date" name="measurement_date">
+
+    <!-- ================= DELIVERY ================= -->
+
+    <h3>Delivery</h3>
+
+    <label>Expected Delivery Date</label>
+    <input type="date" name="delivery_date" required>
+
+    <!-- ================= PAYMENT ================= -->
+
+    <h3>Payment Method</h3>
+
+    <div class="radio-group">
+        <input type="radio" name="payment_method" value="Cash" checked> Cash  
+        <input type="radio" name="payment_method" value="UPI"> UPI  
+        <input type="radio" name="payment_method" value="Paytm"> Paytm  
+        <input type="radio" name="payment_method" value="Card"> Card  
+    </div>
+
+    <!-- ================= SUBMIT ================= -->
+
+    <input type="submit" name="submit" value="Place Order" class="submit-btn">
+
+</form>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("product_name").value = params.get("product") || "";
+  document.getElementById("category").value = params.get("category") || "";
+  document.getElementById("price").value = params.get("price") || "";
+});
+</script>
+
+</body>
+</html>
